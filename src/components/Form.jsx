@@ -12,7 +12,6 @@ const submitHandler = async (e) => {
 }
 
 const changeHandler = (e) => {
-  // console.log(e.currentTarget.value)
   setCity(e.currentTarget.value)
 }
 
