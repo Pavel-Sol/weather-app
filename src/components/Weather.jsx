@@ -1,12 +1,15 @@
 import {useSelector} from 'react-redux'
-
+import Loader from './Loader'
 
 const Weather = () => {
   const data = useSelector(state => state.data)
+  const loading = useSelector(state => state.loading)
 
   return (
     <div className="weather__wrap">
-      <h2>info about weather</h2>
+      {
+        loading &&  <Loader/> 
+      }
       {
         data
         ? <div>
@@ -17,7 +20,7 @@ const Weather = () => {
             <div>влажность: {data.main.humidity}</div>
             <div>давление: {data.main.pressure}</div>
         </div>
-        : <h2>город не выбран</h2>
+        : !loading && <h2>город не выбран</h2>
       }
     </div>
   );
