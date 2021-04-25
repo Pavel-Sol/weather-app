@@ -1,4 +1,4 @@
-import { getWeatherAC } from './../reducers/weatherReducer';
+import { GET_WEATHER } from './../types';
 
 export const getWeather = () => {
   return async (dispatch) => {
@@ -7,6 +7,9 @@ export const getWeather = () => {
     );
 
     const json = await res.json();
-    dispatch(getWeatherAC(json));
+    dispatch({
+      type: GET_WEATHER,
+      payload: json,
+    });
   };
 };

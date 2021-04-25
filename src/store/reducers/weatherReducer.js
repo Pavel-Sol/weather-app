@@ -13,10 +13,3 @@ export const weatherReducer = (state = defaultState, action) => {
       return state;
   }
 };
-
-export const getWeatherAC = (payload) => {
-  return {
-    type: GET_WEATHER,
-    payload,
-  };
-};

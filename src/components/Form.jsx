@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-// import {getWeatherAC} from './../store/reducers/weatherReducer'
 import {getWeather} from './../store/actions/weatherActions'
 
 const Form = () => {
@@ -7,11 +6,6 @@ const Form = () => {
 
 const fetchData = async (e) => {
   e.preventDefault()
-
-  // const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=саратов,ru&appid=38bd2a6dccee12ceb0fe1c7b9ecb81bd&lang=ru`);
-
-  // const json = await res.json();
-  // dispath(getWeatherAC(json))
   
   dispatch(getWeather())
 }
