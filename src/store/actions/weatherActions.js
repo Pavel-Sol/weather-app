@@ -1,4 +1,4 @@
-import { GET_WEATHER, SHOW_LOADER, HIDE_LOADER } from './../types';
+import { GET_WEATHER, SHOW_LOADER, HIDE_LOADER, SET_ALERT } from './../types';
 
 export const getWeather = (city) => {
   return async (dispatch) => {
@@ -20,7 +20,8 @@ export const getWeather = (city) => {
         payload: json,
       });
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
+      dispatch(setAlert(error.message));
     }
 
     dispatch(hideLoader());
@@ -33,4 +34,11 @@ export const showLoader = () => {
 
 export const hideLoader = () => {
   return { type: HIDE_LOADER };
+};
+
+export const setAlert = (errorMsg) => {
+  return {
+    type: SET_ALERT,
+    payload: errorMsg,
+  };
 };

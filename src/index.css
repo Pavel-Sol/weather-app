@@ -14,3 +14,23 @@ code {
   text-align: center;
   padding: 50px 20px;
 }
+
+.alert__wrap {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.4s;
+}
+
+.alert__body {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(226, 141, 43);
+  color: aliceblue;
+}

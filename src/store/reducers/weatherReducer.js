@@ -1,8 +1,9 @@
-import { GET_WEATHER, SHOW_LOADER, HIDE_LOADER } from './../types';
+import { GET_WEATHER, SHOW_LOADER, HIDE_LOADER, SET_ALERT } from './../types';
 
 const defaultState = {
   data: null,
   loading: false,
+  alert: '',
 };
 
 export const weatherReducer = (state = defaultState, action) => {
@@ -15,6 +16,9 @@ export const weatherReducer = (state = defaultState, action) => {
 
     case HIDE_LOADER:
       return { ...state, loading: false };
+
+    case SET_ALERT:
+      return { ...state, alert: action.payload };
 
     default:
       return state;
