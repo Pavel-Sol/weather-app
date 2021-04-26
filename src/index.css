@@ -34,3 +34,13 @@ code {
   background-color: rgb(226, 141, 43);
   color: aliceblue;
 }
+
+.loader__wrap {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+}
+
+.loader__wrap img {
+  width: 100%;
+}

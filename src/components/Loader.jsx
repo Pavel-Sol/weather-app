@@ -1,9 +1,9 @@
-
+import loaderImg from './../assets/images/loading.gif'
 
 const Loader = () => {
-   return (
-      <h3>загрузка...</h3>
-   )
+   return  <div className='loader__wrap'>
+  <img src={loaderImg} alt=""/>
+</div>
 }
 
 export default Loader
