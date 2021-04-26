@@ -18,7 +18,7 @@ const changeHandler = (e) => {
   return (
     <div className="form__wrap">
       <form onSubmit={submitHandler}>
-        <input onChange={changeHandler} type="text" />
+        <input required onChange={changeHandler} type="text" />
         <button>узнать погоду</button>
       </form>
     </div>
