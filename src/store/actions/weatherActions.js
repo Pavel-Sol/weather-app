@@ -20,7 +20,6 @@ export const getWeather = (city) => {
         payload: json,
       });
     } catch (error) {
-      // console.log(error.message);
       dispatch(setAlert(error.message));
     }
 

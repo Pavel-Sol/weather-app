@@ -13,8 +13,8 @@ const Alert = ()=>  {
    return(
       <div onClick={() => closeAlert()} className='alert__wrap'>
          <div onClick={e => e.stopPropagation()} className='alert__body'>
-            <p className='alert__message'>{errorMsg}</p>
-            <button onClick={() => closeAlert()}>закрыть</button>
+            <p className='alert__message'>{errorMsg} !</p>
+            <button className='btn alert__btn' onClick={() => closeAlert()}>close</button>
          </div>
       </div>
    )

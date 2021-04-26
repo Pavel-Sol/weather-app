@@ -1,18 +1,91 @@
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  color: rgb(241, 228, 228);
 }
 
 .App {
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgba(34, 61, 195, 1) 0%, rgb(13, 144, 170) 100%);
+}
+
+.container {
   text-align: center;
   padding: 50px 20px;
+}
+
+.form__wrap {
+  max-width: 400px;
+  margin: 0px auto;
+}
+
+.form__input {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 18px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.form__btn {
+  width: 100%;
+  height: 40px;
+  color: aliceblue;
+  background-color: #a35c0b;
+  margin-top: 10px;
+}
+
+.form__btn:hover {
+  background-color: #7a4407;
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 18px;
+  border: 0;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+
+.weather__wrap {
+  max-width: 550px;
+  margin: 40px auto 0px auto;
+}
+.weather__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather__item {
+  padding: 10px;
+}
+
+.weather__city {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.heading {
+  text-transform: uppercase;
+}
+
+.desc {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .alert__wrap {
@@ -26,13 +99,26 @@ code {
   opacity: 1;
   pointer-events: all;
   transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .alert__body {
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 150px;
   background-color: rgb(226, 141, 43);
   color: aliceblue;
+  font-size: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.alert__btn {
+  padding: 5px 35px;
+  font-size: 16px;
+  margin-top: 30px;
 }
 
 .loader__wrap {
@@ -43,4 +129,10 @@ code {
 
 .loader__wrap img {
   width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .weather__list {
+    flex-direction: column;
+  }
 }
