@@ -1,10 +1,11 @@
+import { FC } from 'react';
 import {useSelector} from 'react-redux'
 import Loader from './Loader'
+import {RootStateType} from './../store'
 
-const Weather = () => {
-  const data = useSelector(state => state.data)
-  const loading = useSelector(state => state.loading)
-  console.log(data)
+const Weather: FC = () => {
+  const data = useSelector((state: RootStateType) => state.data)
+  const loading = useSelector((state: RootStateType) => state.loading)
 
   return (
     <div className="weather__wrap">

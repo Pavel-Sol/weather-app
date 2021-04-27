@@ -2,9 +2,11 @@ import Form from './components/Form';
 import Weather from './components/Weather';
 import Alert from './components/Alert';
 import { useSelector } from 'react-redux';
+import {RootStateType} from './store'
+import { FC } from 'react';
 
-function App() {
-  const errorMsg = useSelector((state) => state.alert);
+const App: FC = () => {
+  const errorMsg = useSelector((state: RootStateType) => state.alert);
 
   return (
     <div className="App">

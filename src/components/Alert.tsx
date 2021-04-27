@@ -1,9 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
-import {setAlert} from './../store/actions/weatherActions'
+import {setAlert} from '../store/actions/weatherActions'
+import {FC} from 'react'
+import {RootStateType} from './../store'
 
 
-const Alert = ()=>  {
-   const errorMsg = useSelector((state) => state.alert);
+const Alert: FC = ()=>  {
+   const errorMsg = useSelector((state: RootStateType) => state.alert);
    const dispatch = useDispatch()
 
    const closeAlert = () => {
