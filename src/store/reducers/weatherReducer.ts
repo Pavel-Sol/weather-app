@@ -1,12 +1,13 @@
-import { GET_WEATHER, SHOW_LOADER, HIDE_LOADER, SET_ALERT } from './../types';
+import { GET_WEATHER, SHOW_LOADER, HIDE_LOADER, SET_ALERT } from '../types';
+import { WeatherStateType, WeatherActionType } from '../types';
 
-const defaultState = {
+const defaultState: WeatherStateType = {
   data: null,
   loading: false,
   alert: '',
 };
 
-export const weatherReducer = (state = defaultState, action) => {
+export const weatherReducer = (state = defaultState, action: WeatherActionType): WeatherStateType => {
   switch (action.type) {
     case GET_WEATHER:
       return { ...state, data: action.payload };

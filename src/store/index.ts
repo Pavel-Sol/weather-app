@@ -3,3 +3,5 @@ import { weatherReducer } from './reducers/weatherReducer';
 import thunk from 'redux-thunk';
 
 export const store = createStore(weatherReducer, applyMiddleware(thunk));
+
+export type RootStateType = ReturnType<typeof weatherReducer>;

@@ -4,6 +4,7 @@ import Loader from './Loader'
 const Weather = () => {
   const data = useSelector(state => state.data)
   const loading = useSelector(state => state.loading)
+  console.log(data)
 
   return (
     <div className="weather__wrap">
